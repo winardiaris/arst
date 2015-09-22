@@ -13,7 +13,6 @@ $(document).ready(function() {
 	$('.playsms-mandatory').tooltip();
 	
 	//custom
-	$("#main-menu").hide();
 	$("#main-body").append('<div id="sidebar-main-body"><ul class="sidebar-nav"></ul></div>');
 	$("#main-body").append('<a href="#menu-toggle" class="btn btn-sm btn-primary" id="menu-toggle"><i id="" class="glyphicon glyphicon-eye-open"></i></a>');
 	$("#menu-toggle").click(function(e) {
@@ -38,8 +37,16 @@ $(document).ready(function() {
 	$("#sidebar-main-body .sidebar-nav a").removeClass("brand").removeClass("navbar-brand");
 	$("b.caret").addClass("pull-right").css({"margin":"20px 25px 10px 10px"});
 	$("input[type=text]").addClass("form-control");
+	$("input[type=password]").addClass("form-control");
 	$("select").addClass("form-control");
 	$("textarea").addClass("form-control");
+	
+	//i = $("i[data-toggle=tooltip]");
+	//ibefore = i.before();
+	
+	//if(ibefore.is("input")){
+		//i.wrap('<span class="input-group-addon">');
+	//}
 	
 	$(".dropdown-toggle").click(function(){
 		ini = $(this).next();
@@ -59,5 +66,5 @@ $(document).ready(function() {
 		$("#main-content").css({"margin-top":"10%"});
 	}
 
-	
+	$("#main-menu").remove();
 });
