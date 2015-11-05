@@ -28,7 +28,7 @@ $(document).ready(function() {
 	$("#sidebar-main-body ul.sidebar-nav:eq(1)").addClass("remove");
 	$("#sidebar-main-body ul.sidebar-nav:eq(2)").addClass("remove");
 	$(".remove").remove();
-	$(".divider").hide();
+	$(".divider").remove();
 	$("#sidebar-main-body .sidebar-nav").append('<li><a href="index.php?app=main&amp;inc=core_auth&amp;route=logout"><span class="playsms-icon glyphicon glyphicon-off" alt="Logout" title="Logout"></span></a></li>');
 	brand = $(".navbar-inner .navbar-header ").html();
 	$("#sidebar-main-body .sidebar-nav").prepend(brand);
@@ -65,6 +65,5 @@ $(document).ready(function() {
 		$("#main-footer").hide();
 		$("#main-content").css({"margin-top":"10%"});
 	}
-
 	$("#main-menu").remove();
 });
